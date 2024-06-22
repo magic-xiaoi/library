@@ -6,18 +6,42 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>519</width>
-    <height>331</height>
+    <width>750</width>
+    <height>440</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>管理员大厅</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QWidget#Form {
+        background-color:#fff5cf;
+    }
+    QPushButton {
+        background-color: #b0e0e6; /* 按钮背景颜色 - 淡蓝色 */
+        color: #000080;
+        font-size: 14pt;
+        font-weight: bold;
+        border: 2px solid #4682b4;
+        border-radius: 15px; /* 圆角效果 */
+        padding: 10px;
+    }
+    QPushButton:hover {
+        background-color: #87cefa; /* 悬停时颜色 - 亮蓝色 */
+        color: #ffffff;
+    }
+    QPushButton:pressed {
+        background-color: #6495ed; /* 按下时颜色 - 更深的蓝色 */
+    };
+    
+   </string>
+  </property>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>140</y>
+     <x>530</x>
+     <y>100</y>
      <width>131</width>
      <height>51</height>
     </rect>
@@ -29,34 +53,34 @@
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>140</y>
+     <x>50</x>
+     <y>190</y>
      <width>131</width>
      <height>51</height>
     </rect>
    </property>
    <property name="text">
-    <string>查看借阅记录</string>
+    <string>借阅记录</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_3">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>210</y>
+     <x>50</x>
+     <y>280</y>
      <width>131</width>
      <height>51</height>
     </rect>
    </property>
    <property name="text">
-    <string>查看归还记录</string>
+    <string>归还记录</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_4">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>70</y>
+     <x>530</x>
+     <y>10</y>
      <width>131</width>
      <height>51</height>
     </rect>
@@ -68,27 +92,53 @@
   <widget class="QPushButton" name="pushButton_5">
    <property name="geometry">
     <rect>
-     <x>290</x>
-     <y>70</y>
+     <x>50</x>
+     <y>100</y>
      <width>131</width>
      <height>51</height>
     </rect>
    </property>
    <property name="text">
-    <string>查看在借书籍</string>
+    <string>在借书籍</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_6">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>210</y>
+     <x>530</x>
+     <y>190</y>
      <width>131</width>
      <height>51</height>
     </rect>
    </property>
    <property name="text">
     <string>添加用户</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>340</y>
+     <width>750</width>
+     <height>100</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(../images/7.jpg);</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget_2" native="true">
+   <property name="geometry">
+    <rect>
+     <x>195</x>
+     <y>13</y>
+     <width>321</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(../images/5.jpg);</string>
    </property>
   </widget>
  </widget>

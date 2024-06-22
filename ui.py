@@ -1,3 +1,4 @@
+from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTableWidget, QTableWidgetItem, QPushButton, QVBoxLayout, QWidget
 from PyQt5.QtCore import Qt
 from PyQt5 import uic
@@ -177,6 +178,22 @@ class AMain_win(QWidget):
         self.borrow_log_btn = self.AMainWindow.pushButton_2
         self.send_log_btn = self.AMainWindow.pushButton_3
 
+        self.widget=self.AMainWindow.widget
+        self.widget_2 = self.AMainWindow.widget_2
+        self.init_widget()
+        self.init_widget_2()
+
+        # self.show()
+    def init_widget(self):
+        image_path = os.path.join(dir, "images/7.jpg").replace("\\", "/")
+        self.widget.setStyleSheet("background-image:url({});background-size: cover;".format(image_path))
+    def init_widget_2(self):
+        image_path = os.path.join(dir, "images/5.jpg").replace("\\", "/")
+        self.widget_2.setStyleSheet("background-image:url({});background-size: cover;".format(image_path))
+
+
+
+
 
 
     def con_func(self):
@@ -229,6 +246,19 @@ class Main_win(QWidget):
         self.MainWindow = uic.loadUi(main_filepath)
         self.borrow_btn = self.MainWindow.pushButton_2
         self.send_btn = self.MainWindow.pushButton_3
+        self.widget =self.MainWindow.widget
+        self.init_widget()
+        # self.widget_2 = self.MainWindow.widget_2
+        # self.init_widget_2()
+    def init_widget(self):
+        image_path=os.path.join(dir, "images/3.png").replace("\\","/")
+        self.widget.setStyleSheet("background-image:url({});background-size: cover;".format(image_path))
+
+    # def init_widget_2(self):
+    #     image_path = os.path.join(dir, "images/4.png").replace("\\", "/")
+    #     self.widget_2.setStyleSheet("background-image:url({});background-size: contain;".format(image_path))
+
+
 
     def con_func(self):
         self.borrow_btn.clicked.connect(self.borror)
@@ -1230,22 +1260,36 @@ class Login_win(QWidget):
     def init_ui(self):
         login_filepath = os.path.join(dir, "UI_window/login.ui")
         self.loginWindow = uic.loadUi(login_filepath)
+
         self.radio_adm = self.loginWindow.radioButton
         self.radio_user = self.loginWindow.radioButton_2
-
         self.account_label = self.loginWindow.lineEdit
         self.passwd_label = self.loginWindow.lineEdit_2
         self.login_btn = self.loginWindow.pushButton
-        self.exit_btn =self.loginWindow.pushButton_2
+        # self.exit_btn = self.loginWindow.pushButton_2
 
         # 设置基础样式
-        self.account_label.setPlaceholderText("account")
-        self.passwd_label.setPlaceholderText("passwd")
+        self.account_label.setPlaceholderText("")
+        self.passwd_label.setPlaceholderText("")
         self.passwd_label.setEchoMode(QLineEdit.Password)
+
+        self.widget_2 = self.loginWindow.widget_2
+        self.init_widget_2()
+
+        self.init_Form()
+        self.show()
+
+
+    def init_widget_2(self):
+        image_path = os.path.join(dir, "images/1.jpg").replace("\\", "/")
+        self.widget_2.setStyleSheet(f"background-image: url({image_path});")
+    def init_Form(self):
+        image_path = os.path.join(dir, "images/2.jpg").replace("\\", "/")
+        self.setStyleSheet(f"background-image: url({image_path});")
 
     # 绑定槽函数
     def con_func(self):
-        self.exit_btn.clicked.connect(self._exit)
+        # self.exit_btn.clicked.connect(self._exit)
         self.login_btn.clicked.connect(self._login)
 
     # 登录

@@ -6,22 +6,58 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>386</width>
-    <height>262</height>
+    <width>793</width>
+    <height>434</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>用户大厅</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">
+background-color: rgb(255, 245, 207);</string>
+   </property>
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>50</y>
+      <width>400</width>
+      <height>300</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(../images/3.png);</string>
+    </property>
+   </widget>
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>70</y>
+      <x>80</x>
+      <y>90</y>
       <width>141</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+      QPushButton {
+          background-color: #b0e0e6; /* 按钮背景颜色 - 淡蓝色 */
+          color: #000080;
+          font-size: 14pt;
+          font-weight: bold;
+          border: 2px solid #4682b4;
+          border-radius: 15px; /* 圆角效果 */
+      }
+      QPushButton:hover {
+          background-color: #87cefa; /* 悬停时颜色 - 亮蓝色 */
+          color: #ffffff;
+      }
+      QPushButton:pressed {
+          background-color: #6495ed; /* 按下时颜色 - 深蓝色 */
+      }
+     </string>
     </property>
     <property name="text">
      <string>借阅书籍</string>
@@ -30,11 +66,30 @@
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>140</y>
+      <x>80</x>
+      <y>240</y>
       <width>141</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+      QPushButton {
+          background-color: #b0e0e6; /* 按钮背景颜色 - 淡蓝色 */
+          color: #000080;
+          font-size: 14pt;
+          font-weight: bold;
+          border: 2px solid #4682b4;
+          border-radius: 15px; /* 圆角效果 */
+      }
+      QPushButton:hover {
+          background-color: #87cefa; /* 悬停时颜色 - 亮蓝色 */
+          color: #ffffff;
+      }
+      QPushButton:pressed {
+          background-color: #6495ed; /* 按下时颜色 - 深蓝色 */
+      }
+     </string>
     </property>
     <property name="text">
      <string>归还书籍</string>
