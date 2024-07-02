@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>用户名称</string>
+    <string>用户密码</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit">
